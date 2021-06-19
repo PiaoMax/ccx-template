@@ -1,19 +1,10 @@
-import React, { memo } from "react";
+import React from "react";
 import { observer } from "mobx-react-lite";
 import _ from "lodash";
-import { useLocation, RouteChildrenProps } from "react-router-dom";
-import { Button, Input, Form, DatePicker, Menu, Dropdown, Popover, Checkbox, Tabs } from "antd";
+import {Tabs } from "antd";
 
 import {
-  DataTable,
-  DataColumn,
-  useHistory,
-  SearchForm,
-  useSearchForm,
-  useFormModal,
-  MLModal,
   Breadcrumb,
-  AntIcon
 } from "@cyber-ccx/lib";
 import { useStore } from '@/models'
 
