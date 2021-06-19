@@ -57,14 +57,14 @@ const Login: React.FC<IProps> = (props) => {
 
   const userNamePrefix = useMemo(() => {
     return (
-      <img src={focusTarget === 1 ? require('./img/username_28px_on.png') : require('./img/username_28px_off.png')}
+      <img src={focusTarget === 1 ? require('@/assets/images/username_28px_on.png') : require('@/assets/images/username_28px_off.png')}
         className={styles.tagImg} alt="" />
     );
   }, [focusTarget]);
 
   const passWordPrefix = useMemo(() => {
     return (
-      <img src={focusTarget === 2 ? require('./img/password_28px_on.png') : require('./img/password_28px_off.png')}
+      <img src={focusTarget === 2 ? require('@/assets/images/password_28px_on.png') : require('@/assets/images/password_28px_off.png')}
         className={styles.tagImg} alt="" />
     );
   }, [focusTarget]);

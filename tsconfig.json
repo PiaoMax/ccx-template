@@ -21,9 +21,7 @@
     "baseUrl": ".",
     "experimentalDecorators": true,
     "paths":{
-      "@root/*":["./*"],
-      "@/*": ["./src/*"],
-      "@@/*": ["./src/.umi/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": [
