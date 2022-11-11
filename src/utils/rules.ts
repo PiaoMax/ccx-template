@@ -5,10 +5,12 @@ const validate:{[k:string]:Rule} = {
   required:{required:true},
   number: {pattern:/^(\-|\+)?\d+(\.\d+)?$/,message:'请输入正确的数字'},
   integer: {pattern:/^\d+$/,message:'请输入正确的整数'},
-  email: {type:'email'}
+  email: {type:'email'},
+  phone: {pattern:/^1\d{10}$/,message:'请输入11位手机号码'},
+  price: {pattern: /^(\d+)(.\d{0,2})?$/ , message: '只能是数字，正数，小数点字最多2位'},
 }
 
-type ruleType = 'required'|'number'|'integer'|'email'|RegExp|Rule
+type ruleType = 'required'|'number'|'integer'|'email'|'phone'|'price'|RegExp|Rule
 
 const Rules = (...rules :ruleType[]) => {
   let isRequired = false;
@@ -25,7 +27,7 @@ const Rules = (...rules :ruleType[]) => {
     }
   })
   let required = isRequired?{
-    className:'required',
+    // className:'required',
     required:true
   }:{};
   return {
